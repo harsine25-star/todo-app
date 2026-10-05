@@ -1,0 +1,13 @@
+{
+  "name": "todo-app-gnits",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix client\" \"npm run start --prefix server\"",
+    "build": "npm install --prefix client && npm run build --prefix client && npm install --prefix server",
+    "start": "cross-env NODE_ENV=production node server/index.js"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3"
+  }
+}
